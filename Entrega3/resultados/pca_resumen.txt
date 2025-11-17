@@ -1,0 +1,77 @@
+================================================================================
+ENTREGA 3 - ANÁLISIS DE COMPONENTES PRINCIPALES (PCA)
+================================================================================
+
+RESUMEN DEL ANÁLISIS
+--------------------------------------------------------------------------------
+Dataset original:        86 observaciones × 12 características
+Dataset reducido (PCA):  86 observaciones × 6 componentes
+Reducción dimensional:   50.0%
+Varianza conservada:     91.75%
+
+VARIANZA EXPLICADA POR COMPONENTE
+--------------------------------------------------------------------------------
+PC 1:  37.08% (acumulado:  37.08%)
+PC 2:  24.71% (acumulado:  61.79%)
+PC 3:  12.57% (acumulado:  74.36%)
+PC 4:   8.87% (acumulado:  83.23%)
+PC 5:   4.48% (acumulado:  87.70%)
+PC 6:   4.05% (acumulado:  91.75%)
+
+INTERPRETACIÓN DE COMPONENTES PRINCIPALES
+--------------------------------------------------------------------------------
+
+▶ PC1:
+  Top 5 características contribuyentes:
+    + angulo_tobillo_promedio        :  0.541
+    - velocidad_promedio             :  0.361
+    + simetria_promedio              :  0.335
+    + angulo_rodilla_promedio        :  0.320
+    - dist_hombros_caderas           :  0.290
+
+▶ PC2:
+  Top 5 características contribuyentes:
+    + frames                         :  0.470
+    + brillo_promedio                :  0.413
+    - simetria_promedio              :  0.400
+    + duracion_seg                   :  0.379
+    - angulo_cadera_promedio         :  0.344
+
+▶ PC3:
+  Top 5 características contribuyentes:
+    + dist_hombros_caderas           :  0.601
+    + inclinacion_promedio           :  0.424
+    + simetria_promedio              :  0.366
+    + frames                         :  0.352
+    + angulo_rodilla_promedio        :  0.294
+
+▶ PC4:
+  Top 5 características contribuyentes:
+    + movimiento_promedio            :  0.499
+    + brillo_promedio                :  0.452
+    + angulo_cadera_promedio         :  0.447
+    - inclinacion_promedio           :  0.281
+    + angulo_rodilla_promedio        :  0.252
+
+▶ PC5:
+  Top 5 características contribuyentes:
+    + brillo_promedio                :  0.622
+    - duracion_seg                   :  0.348
+    + simetria_promedio              :  0.307
+    - angulo_rodilla_promedio        :  0.287
+    + angulo_tobillo_promedio        :  0.276
+
+▶ PC6:
+  Top 5 características contribuyentes:
+    + aceleracion_promedio           :  0.566
+    + angulo_tobillo_promedio        :  0.536
+    + velocidad_promedio             :  0.442
+    + duracion_seg                   :  0.236
+    + frames                         :  0.229
+
+CONCLUSIÓN
+--------------------------------------------------------------------------------
+Se redujo la dimensionalidad de 12 a 6 componentes,
+conservando el 91.75% de la varianza original.
+Esto permite entrenar modelos más simples y eficientes, reduciendo el riesgo
+de overfitting y mejorando la interpretabilidad del sistema.
