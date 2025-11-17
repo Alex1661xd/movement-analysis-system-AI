@@ -1,0 +1,44 @@
+# Archivos grandes de datos
+../APO3_EntregaFinal/
+datasets/
+*.mp4
+*.avi
+*.mov
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# Jupyter
+*.ipynb
+.ipynb_checkpoints
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# Documentación
+README_APP.md
+*.html
+
+# Scripts de entrenamiento
+entrega_proyectofinal_apo3_movementanalysis.py
+guardar_modelos.py
+reentrenar_svm_con_probabilidades.py
+

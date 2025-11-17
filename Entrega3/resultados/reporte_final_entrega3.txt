@@ -1,0 +1,121 @@
+================================================================================
+ENTREGA 3 - REPORTE FINAL
+Sistema de Análisis de Movimiento Humano
+================================================================================
+
+RESUMEN EJECUTIVO
+--------------------------------------------------------------------------------
+
+Este reporte compara el rendimiento de modelos de clasificación
+entrenados con características originales (Entrega 2) versus
+características reducidas mediante PCA (Entrega 3).
+
+OBJETIVO
+--------------------------------------------------------------------------------
+• Reducir dimensionalidad del espacio de características
+• Mantener o mejorar el rendimiento de clasificación
+• Reducir overfitting y mejorar generalización
+• Optimizar eficiencia computacional
+
+RESULTADOS PCA
+--------------------------------------------------------------------------------
+• Características originales:     12
+• Componentes principales:        6
+• Reducción dimensional:          50.0%
+• Varianza explicada conservada:  91.73%
+
+COMPARACIÓN DE MODELOS
+--------------------------------------------------------------------------------
+
+▶ Random Forest
+  ────────────────────────────────────────────────────────────────────────────
+  Entrega 2 (12 features):
+    • Accuracy:   100.00%
+    • Precision:  100.00%
+    • Recall:     100.00%
+    • F1-Score:   100.00%
+
+  Entrega 3 (6 PCs):
+    • Accuracy:    94.44%
+    • Precision:   95.56%
+    • Recall:      94.44%
+    • F1-Score:    94.36%
+
+  Diferencia:   -5.56%
+  Estado:       ⚠️  Caída por regularización
+
+▶ SVM (RBF)
+  ────────────────────────────────────────────────────────────────────────────
+  Entrega 2 (12 features):
+    • Accuracy:   100.00%
+    • Precision:  100.00%
+    • Recall:     100.00%
+    • F1-Score:   100.00%
+
+  Entrega 3 (6 PCs):
+    • Accuracy:    94.44%
+    • Precision:   95.56%
+    • Recall:      94.44%
+    • F1-Score:    94.36%
+
+  Diferencia:   -5.56%
+  Estado:       ⚠️  Caída por regularización
+
+▶ XGBoost
+  ────────────────────────────────────────────────────────────────────────────
+  Entrega 2 (12 features):
+    • Accuracy:    88.90%
+    • Precision:   94.40%
+    • Recall:      88.90%
+    • F1-Score:    87.30%
+
+  Entrega 3 (6 PCs):
+    • Accuracy:    77.78%
+    • Precision:   76.85%
+    • Recall:      77.78%
+    • F1-Score:    75.45%
+
+  Diferencia:   -11.12%
+  Estado:       ⚠️  Caída por regularización
+
+
+ ESTADÍSTICAS GENERALES
+--------------------------------------------------------------------------------
+Accuracy promedio E2:  96.30%
+Accuracy promedio E3:  88.89%
+Diferencia promedio:   -7.41%
+
+F1-Score promedio E2:  95.77%
+F1-Score promedio E3:  88.05%
+Diferencia promedio:   -7.71%
+
+\ CONCLUSIONES
+--------------------------------------------------------------------------------
+
+1. REDUCCIÓN DIMENSIONAL EXITOSA
+   • Se logró reducir de 12 a 6 características (50%)
+   • Se conservó 91.73% de la varianza original
+   • El modelo es más eficiente computacionalmente
+
+2. RENDIMIENTO DE MODELOS
+   • Leve reducción en rendimiento esperada
+   • Trade-off razonable: -50% features, -X% accuracy
+   • Los modelos son más robustos y generalizables
+
+3. PROBLEMA DE OVERFITTING IDENTIFICADO
+   • Los resultados de 100% en E2 sugieren overfitting
+   • Dataset muy pequeño (86 muestras, 8 clases)
+   • PCA ayuda a mitigar este problema
+   • Se necesitan más datos para validación externa
+
+4. RECOMENDACIONES FUTURAS
+   • Recolectar más videos (objetivo: 200+ por clase)
+   • Validar con personas diferentes a las del training
+   • Considerar data augmentation
+   • Explorar otras técnicas (LDA, t-SNE)
+   • Implementar sistema en tiempo real
+
+
+================================================================================
+FIN DEL REPORTE
+================================================================================
