@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+
+# Jupyter
+*.ipynb
+.ipynb_checkpoints
+
+# Datos grandes (no necesarios en producción)
+APO3_EntregaFinal/Entrega1/
+APO3_EntregaFinal/Entrega2/videos/
+APO3_EntregaFinal/Entrega2/procesados/
+APO3_EntregaFinal/Entrega2/landmarks/
+*.mp4
+*.avi
+*.mov
+datasets/
+
+# Documentación
+*.md
+*.html
+*.txt
+!requirements.txt
+!Entrega3/requirements.txt
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Scripts de desarrollo
+Entrega3/entrega_proyectofinal_apo3_movementanalysis.py
+Entrega3/guardar_modelos.py
+Entrega3/reentrenar_svm_con_probabilidades.py
+
+# Archivos de configuración que no se necesitan
+Entrega3/.streamlit/
+nixpacks.toml
+railway.toml
+Procfile
+
