@@ -1,0 +1,16 @@
+[phases.setup]
+nixPkgs = ["python311", "gcc"]
+
+[phases.install]
+cmds = [
+    "cd Entrega3",
+    "pip install --upgrade pip",
+    "pip install -r requirements.txt"
+]
+
+[phases.build]
+cmds = ["echo 'Build complete'"]
+
+[start]
+cmd = "cd Entrega3 && streamlit run app_clasificador_movimiento.py --server.port $PORT --server.address 0.0.0.0 --server.headless true"
+
