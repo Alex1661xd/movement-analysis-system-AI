@@ -303,7 +303,7 @@ def clasificar_video(metricas, modelos):
 
 def main():
     # Encabezado
-    st.markdown('<div class="main-header">🏃 Clasificador de Movimiento Humano</div>', 
+    st.markdown('<div class="main-header"> Clasificador de Movimiento Humano</div>', 
                 unsafe_allow_html=True)
     st.markdown('<div class="sub-header">Sistema de Análisis de Actividades con IA - Entrega 3</div>', 
                 unsafe_allow_html=True)
@@ -358,7 +358,7 @@ def main():
     st.markdown("---")
     
     # Instrucciones
-    with st.expander("📖 Cómo usar esta aplicación", expanded=True):
+    with st.expander("Cómo usar esta aplicación", expanded=True):
         st.markdown("""
         1. **Sube un video** usando el botón de abajo
         2. El sistema extraerá automáticamente las **características biomecánicas** usando MediaPipe
@@ -374,7 +374,7 @@ def main():
     st.markdown("---")
     
     # Upload de video
-    st.subheader("📤 Subir Video para Clasificar")
+    st.subheader("Subir Video para Clasificar")
     
     uploaded_file = st.file_uploader(
         "Arrastra tu video aquí o haz clic para seleccionar",
@@ -396,7 +396,7 @@ def main():
         
         with col2:
             st.info(f"""
-            **📹 Información del archivo:**
+            **Información del archivo:**
             - **Nombre:** {uploaded_file.name}
             - **Tamaño:** {uploaded_file.size / 1024:.1f} KB
             """)
@@ -415,7 +415,7 @@ def main():
                 status_text = st.empty()
                 
                 # Paso 1: Extraer métricas
-                status_text.text("🔍 Paso 1/3: Extrayendo landmarks con MediaPipe...")
+                status_text.text("Paso 1/3: Extrayendo landmarks con MediaPipe...")
                 progress_bar.progress(33)
                 
                 resultado = extraer_metricas_video(video_path)
@@ -428,13 +428,13 @@ def main():
                 metricas, frames_con_pose, total_frames = resultado
                 
                 # Paso 2: Clasificar
-                status_text.text("🤖 Paso 2/3: Clasificando con modelos de IA...")
+                status_text.text("Paso 2/3: Clasificando con modelos de IA...")
                 progress_bar.progress(66)
                 
                 predicciones, componentes_pca = clasificar_video(metricas, modelos)
                 
                 # Paso 3: Mostrar resultados
-                status_text.text("✅ Paso 3/3: Generando resultados...")
+                status_text.text("Paso 3/3: Generando resultados...")
                 progress_bar.progress(100)
                 
                 # Limpiar barra de progreso
@@ -489,7 +489,7 @@ def main():
             st.markdown("---")
             
             # Métricas biomecánicas
-            st.subheader("📏 Métricas Biomecánicas Extraídas")
+            st.subheader("Métricas Biomecánicas Extraídas")
             
             col1, col2, col3, col4 = st.columns(4)
             
@@ -515,7 +515,7 @@ def main():
             
             # Gráfica de componentes PCA
             st.markdown("---")
-            st.subheader("🔬 Análisis de Componentes Principales (PCA)")
+            st.subheader("Análisis de Componentes Principales (PCA)")
             
             col1, col2 = st.columns([2, 1])
             
@@ -537,7 +537,7 @@ def main():
             
             with col2:
                 st.markdown("""
-                ### 📌 Interpretación
+                ### Interpretación
                 
                 Los **6 componentes principales** representan combinaciones de las 12 características originales.
                 
@@ -558,7 +558,7 @@ def main():
             with col1:
                 st.markdown("""
                 <div class="info-box">
-                <h4>✅ Calidad de Detección</h4>
+                <h4>Calidad de Detección</h4>
                 <p>Se detectaron landmarks en <strong>{:.1f}%</strong> de los frames ({}/{} frames).</p>
                 <p>Esto indica una <strong>buena calidad de detección</strong> para la clasificación.</p>
                 </div>
