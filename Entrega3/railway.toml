@@ -1,8 +1,9 @@
 [build]
 builder = "NIXPACKS"
+watchPatterns = ["Entrega3/**"]
 
 [deploy]
-startCommand = "streamlit run app_clasificador_movimiento.py --server.port $PORT --server.address 0.0.0.0 --server.headless true"
+startCommand = "cd Entrega3 && streamlit run app_clasificador_movimiento.py --server.port $PORT --server.address 0.0.0.0 --server.headless true"
 healthcheckPath = "/"
 healthcheckTimeout = 100
 restartPolicyType = "ON_FAILURE"
