@@ -1,0 +1,3 @@
+# Requirements para Railway - apunta a Entrega3
+-r Entrega3/requirements.txt
+
